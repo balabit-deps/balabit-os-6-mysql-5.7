@@ -1,3 +1,15 @@
+mysql-5.7 (5.7.30-0ubuntu0.16.04.1) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Update to 5.7.30 to fix security issues
+    - CVE-2020-2760, CVE-2020-2763, CVE-2020-2765, CVE-2020-2780,
+      CVE-2020-2804, CVE-2020-2812, CVE-2020-2922
+  * debian/patches/year2020.patch: Dropped, no longer needed
+  * Use bundled libedit, as new version no longer builds with one in Xenial
+    - debian/control: remove libedit-dev Build-Depends.
+    - debian/rules: remove -DWITH_EDITLINE=system.
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 29 Apr 2020 12:43:29 -0400
+
 mysql-5.7 (5.7.29-0ubuntu0.16.04.1) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Update to 5.7.29 to fix security issues
